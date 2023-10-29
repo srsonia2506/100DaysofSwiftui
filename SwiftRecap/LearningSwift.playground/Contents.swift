@@ -15,6 +15,7 @@ var countryOfResidence = "Singapore" //note ";" optional
 print(countryOfResidence)
 countryOfResidence = "New Zealand" //datatype of var cannot be changed!
 print(countryOfResidence)
+
 //string interpolation
 let message = "Hello, my name is Sonia and I reside in \(countryOfResidence)."
 //calc can be used in string interpolation
@@ -65,3 +66,27 @@ gameOver = !gameOver
 print(gameOver)
 gameOver.toggle()
 print(gameOver)
+
+let celsiusTemp=25.2
+let fahrenheitTemp=(celsiusTemp*9)/5+32
+print("Celsius:\(celsiusTemp)°C, Fahrenheit:\(fahrenheitTemp)°F")
+
+//type safety
+var asc = ["a", "b", "c"]
+asc.append("d")
+//length of arr after adding new element
+print(asc.count)
+
+//another method of arr representation
+var desc = Array<String>()
+desc.append("z")
+let alpha = desc[0] + asc[1]
+asc.remove(at: 2) //remove at index
+print(asc.contains("c"))
+//take note how it outputs ReversedCollection instead of reversing!
+print(asc.reversed())
+asc.removeAll()
+print(asc.count)
+
+var hobbies=["ultrarunning", "triathlon", "hiking", "dragonboating"]
+print(hobbies.sorted())
