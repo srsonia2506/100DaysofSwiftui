@@ -78,7 +78,7 @@ asc.append("d")
 print(asc.count)
 
 //another method of arr representation
-var desc = Array<String>()
+var desc = Array<String>() //also represented as [String]()
 desc.append("z")
 let alpha = desc[0] + asc[1]
 asc.remove(at: 2) //remove at index
@@ -88,5 +88,54 @@ print(asc.reversed())
 asc.removeAll()
 print(asc.count)
 
-var hobbies=["ultrarunning", "triathlon", "hiking", "dragonboating"]
+//another representation of arr
+var hobbies: [String]=["ultrarunning", "triathlon", "hiking", "dragonboating"]
 print(hobbies.sorted())
+
+//dictionary
+let character = [
+    "name": "Alex Rider",
+    "job": "Spy",
+    "location": "England"
+]
+//provide a default to return if value not present
+print(character["name", default: "Unknown"])
+print(character["job", default: "Unknown"])
+print(character["location", default: "Unknown"])
+
+//another way of declaring dict
+var heights = [String: Int]()
+heights["Sonia"] = 164
+print(heights.count)
+heights["Percy Jackson"] = 187
+//values can be updated
+heights["Sonia"] = 170
+heights.removeAll() //count+removeAll work for dict too
+
+//sets: unordered and no duplicates
+let hydration = Set(["Tailwind", "Skratch", "Liquid IV"])
+hydration.contains("Skratch")
+print(hydration.sorted())
+
+//alternative set declaration
+var proteinbar = Set<String>()
+proteinbar.insert("gomacro")
+proteinbar.insert("Luna")
+//contains, sorted, count -> works for set
+proteinbar.count
+
+//controls the values of var
+enum Weekend {
+    case saturday
+    case sunday
+}
+
+enum Weekday {
+    //another way to represent enums
+    case monday, tuesday, wednesday, thursday, friday
+}
+
+var day = Weekday.monday
+day = .tuesday //do not need to mention weekday
+
+
